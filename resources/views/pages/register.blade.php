@@ -28,7 +28,7 @@ data-template="vertical-menu-template-free"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 />
 
-<title>Register | Target Media Nusantara</title>
+<title>Register | Deptech</title>
 
 <meta name="description" content="" />
 
@@ -145,24 +145,36 @@ data-template="vertical-menu-template-free"
             </div>
             <!-- /Logo -->
             <h4 class="mb-2">Adventure starts here 🚀</h4>
-            <p class="mb-4">Make your app management easy and fun!</p>
 
             <form id="formRegister" class="mb-3" action="{{ route('store') }}" method="POST">
                 @csrf
             <div class="mb-3">
-                <label for="fullname" class="form-label">Nama Lengkap</label>
+                <label for="first_name" class="form-label">Nama Depan</label>
                 <input
                 type="text"
                 class="form-control"
-                id="fullname"
-                name="fullname"
-                placeholder="Masukan Nama Lengkap"
+                id="first_name"
+                name="first_name"
+                placeholder="Masukan Nama Depan"
                 autofocus
+                required
+                />
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Nama Belakang</label>
+                <input
+                type="text"
+                class="form-control"
+                id="last_name"
+                name="last_name"
+                placeholder="Masukan Nama Belakang"
+                autofocus
+                required
                 />
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required />
             </div>
 
             {{-- <div class="mb-3 form-password-toggle">
@@ -189,7 +201,7 @@ data-template="vertical-menu-template-free"
                 </label>
                 </div>
             </div> --}}
-            <button type="submit" class="btn btn-primary d-grid w-100">Sign up</button>
+            <button type="submit" class="btn btn-primary d-grid w-100">Daftar</button>
             </form>
 
             <p class="text-center">
@@ -224,8 +236,8 @@ data-template="vertical-menu-template-free"
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
-{!! JsValidator::formRequest('App\Http\Requests\RegisterRequest', '#formRegister'); !!}
+{{-- <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script> --}}
+{{-- {!! JsValidator::formRequest('App\Http\Requests\RegisterRequest', '#formRegister'); !!} --}}
 
 </body>
 </html>

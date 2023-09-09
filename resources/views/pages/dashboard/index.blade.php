@@ -1,7 +1,7 @@
 @extends('layout.body')
 
 @section('title')
-    <title>Dashboard - Analytics | Target Media Nusantara</title>
+    <title>Dashboard - Analytics | Deptech</title>
 @endsection
 
 @section('content')

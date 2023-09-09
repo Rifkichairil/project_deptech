@@ -1,7 +1,7 @@
 @extends('layout.body')
 
 @section('title')
-    <title>Karyawan | Target Media Nusantara</title>
+    <title>Karyawan | Deptech</title>
 @endsection
 
 @section('content')

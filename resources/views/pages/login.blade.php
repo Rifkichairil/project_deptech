@@ -27,7 +27,7 @@ data-template="vertical-menu-template-free"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Login | Target Media Nusantara</title>
+    <title>Login | Deptech</title>
 
     <meta name="description" content="" />
 
@@ -155,6 +155,7 @@ data-template="vertical-menu-template-free"
                     name="email"
                     placeholder="Masukan Email"
                     autofocus
+                    required
                 />
                 </div>
                 <div class="mb-3 form-password-toggle">
@@ -169,6 +170,7 @@ data-template="vertical-menu-template-free"
                     name="password"
                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                     aria-describedby="password"
+                    required
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                 </div>
@@ -214,7 +216,7 @@ data-template="vertical-menu-template-free"
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
-{!! JsValidator::formRequest('App\Http\Requests\AuthRequest', '#formAuth'); !!}
+{{-- {!! JsValidator::formRequest('App\Http\Requests\AuthRequest', '#formAuth'); !!} --}}
 
 </body>
 </html>
