@@ -179,12 +179,12 @@ data-template="vertical-menu-template-free"
                     <button class="btn btn-primary d-grid w-100" type="submit">Masuk</button>
                 </div>
             </form>
-            <p class="text-center">
+            {{-- <p class="text-center">
                 <span>Daftarkan akun untuk Admin ?</span>
                 <a href="{{ route('register') }}">
                     <span>Disini</span>
                 </a>
-                </p>
+            </p> --}}
             </div>
         </div>
         <!-- /Register -->

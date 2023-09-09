@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,8 +28,15 @@ Route::middleware(['guest'])->group(function(){
 });
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/dashboard', function () {
-        return view('welcome');
+    Route::controller(DashboardController::class)->group(function(){
+        Route::get('/dashboard', 'dashboard')->name('dashboard');
+    });
+
+    Route::controller(AdminController::class)->prefix('user-admin')->name('user-admin.')->group(function(){
+        Route::get('/datatable', 'datatable')->name('datatable');
+        Route::get('/', 'index')->name('index');
+
+        Route::post('/store', 'store')->name('store');
     });
 
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
