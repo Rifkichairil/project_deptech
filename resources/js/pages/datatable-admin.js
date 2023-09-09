@@ -15,34 +15,25 @@ function DatatableAdmin (url){
     })
 }
 
-// window.adminEdit = function(url){
-//     console.log('testing edit');
-//     let forms = document.getElementById('editAdmin');
-//     $.ajax({
-//         url,
-//         type: 'GET',
-//         // data : { id : id },
-//         success: function(data){
-//             console.log(data);
-//             $('#Editfullname').val(data.personal.fullname)
-//             $('#Editemail').val(data.email)
-//             $('#Editposition_id').val(data.position.name)
-//             $('#Editphone').val(data.phone)
-//             $('#Editktp_number').val(data.identity.ktp_number)
-//             $('#Editnpwp_number').val(data.identity.npwp_number)
-//             $('#Editreligion').val(data.personal.religion)
-//             $('#Editplace_of_birth').val(data.personal.place_of_birth)
-//             $('#Editdate_of_birth').val(data.personal.date_of_birth)
-//             $('#Editgender').val(data.personal.gender)
-//             $('#Editzipcode').val(data.personal.zipcode)
-//             $('#Editaddress').val(data.personal.address)
-//             $('#karyawanModalEdit').modal('show');
-//             forms.action = url;
-//         },
-//         error: function(data){
-//             alert('gagal melakukan proses!');
-//         }
-//     })
-// }
+window.adminEdit = function(url){
+    console.log('testing edit');
+    let forms = document.getElementById('editAdmin');
+    $.ajax({
+        url,
+        type: 'GET',
+        // data : { id : id },
+        success: function(data){
+            console.log(data);
+            $('#edit_first_name').val(data.first_name)
+            $('#edit_last_name').val(data.last_name)
+            $('#edit_email  ').val(data.email)
+            $('#editModalAdmin').modal('show');
+            forms.action = url;
+        },
+        error: function(data){
+            alert('gagal melakukan proses!');
+        }
+    })
+}
 
 window.DatatableAdmin = DatatableAdmin;

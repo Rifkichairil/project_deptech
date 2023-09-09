@@ -37,6 +37,10 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/', 'index')->name('index');
 
         Route::post('/store', 'store')->name('store');
+        Route::get('/{id}/show', 'show')->name('show');
+        Route::post('/{id}/show', 'update')->name('update');
+        Route::post('/{id}/delete', 'delete')->name('delete');
+
     });
 
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');

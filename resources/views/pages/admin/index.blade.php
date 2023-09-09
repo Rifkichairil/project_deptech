@@ -31,7 +31,7 @@
                                 <th>Nama Depan</th>
                                 <th>Nama Belakang</th>
                                 <th>Nama Email</th>
-                                <th>Date</th>
+                                <th>Created Date</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -45,6 +45,7 @@
 <!-- / Content -->
 
 @include('pages.admin.modal._add')
+@include('pages.admin.modal._edit')
 
 @endsection
 
